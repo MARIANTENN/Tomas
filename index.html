@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda diaria de Tomás</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef6f9; color: #222; padding: 20px;}
+    .pregunta { margin: 32px 0; }
+    .pictos { display: flex; gap: 10px; align-items: center;}
+    .pictos img { width: 70px; height: 70px;}
+    label { display:block; margin-top:10px; font-size: 1.2em;}
+    input, textarea { width: 100%; font-size: 1.4em; margin-top: 8px; padding: 8px; border-radius: 10px; border: 1px solid #bbb; }
+    textarea { min-height: 50px; }
+    button { padding: 16px 36px; font-size: 1.2em; background: #6fc7c1; border:none; border-radius:10px; cursor:pointer;}
+    .ayuda { font-size: 1em; background: #fff9c4; padding: 8px 18px; border-radius: 8px; margin-bottom: 18px;}
+  </style>
+</head>
+<body>
+  <h1>📝 Agenda diaria de Tomás</h1>
+  <div class="ayuda">
+    <b>Ayuda:</b> Podés responder usando el teclado de <a href="https://grid.asterics.eu/#grid/grid-data-1753738833446-163" target="_blank">AsTeRICS Grid</a> o tu comunicador.
+  </div>
+
+  <form id="formulario">
+
+    <!-- Pregunta 1: ¿Qué día es hoy? -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1359/1359_300.png" alt="Calendario">
+        <span style="font-size:1.3em;margin-left:12px;">¿Qué día es hoy?</span>
+      </div>
+      <label for="dia">Escribir la respuesta</label>
+      <input type="text" id="dia" name="dia" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 2: Hoy el tiempo es -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1264/1264_300.png" alt="Clima sol">
+        <img src="https://static.arasaac.org/pictograms/1266/1266_300.png" alt="Clima nubes">
+        <img src="https://static.arasaac.org/pictograms/1268/1268_300.png" alt="Clima lluvia">
+        <img src="https://static.arasaac.org/pictograms/1270/1270_300.png" alt="Clima viento">
+        <span style="font-size:1.3em;margin-left:12px;">Hoy el tiempo es</span>
+      </div>
+      <label for="clima">Escribir la respuesta</label>
+      <input type="text" id="clima" name="clima" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 3: La estación en la que estamos es -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1098/1098_300.png" alt="Invierno">
+        <img src="https://static.arasaac.org/pictograms/1099/1099_300.png" alt="Primavera">
+        <img src="https://static.arasaac.org/pictograms/1101/1101_300.png" alt="Verano">
+        <img src="https://static.arasaac.org/pictograms/1100/1100_300.png" alt="Otoño">
+        <span style="font-size:1.3em;margin-left:12px;">La estación en la que estamos es</span>
+      </div>
+      <label for="estacion">Escribir la respuesta</label>
+      <input type="text" id="estacion" name="estacion" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 4: Hoy me siento -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1517/1517_300.png" alt="Feliz">
+        <img src="https://static.arasaac.org/pictograms/5202/5202_300.png" alt="Triste">
+        <img src="https://static.arasaac.org/pictograms/1555/1555_300.png" alt="Enojado">
+        <img src="https://static.arasaac.org/pictograms/1520/1520_300.png" alt="Cansado">
+        <span style="font-size:1.3em;margin-left:12px;">Hoy me siento</span>
+      </div>
+      <label for="sentimiento">Escribir la respuesta</label>
+      <input type="text" id="sentimiento" name="sentimiento" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 5: Hoy comí -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/4126/4126_300.png" alt="Comida">
+        <span style="font-size:1.3em;margin-left:12px;">Hoy comí</span>
+      </div>
+      <label for="comida">Escribir la respuesta</label>
+      <input type="text" id="comida" name="comida" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 6: En la mañana fui -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1207/1207_300.png" alt="Mañana">
+        <img src="https://static.arasaac.org/pictograms/669/669_300.png" alt="Ir">
+        <span style="font-size:1.3em;margin-left:12px;">En la mañana fui</span>
+      </div>
+      <label for="maniana">Escribir la respuesta</label>
+      <input type="text" id="maniana" name="maniana" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 7: En la tarde -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1208/1208_300.png" alt="Tarde">
+        <span style="font-size:1.3em;margin-left:12px;">En la tarde</span>
+      </div>
+      <label for="tarde">Escribir la respuesta</label>
+      <input type="text" id="tarde" name="tarde" autocomplete="off" />
+    </div>
+
+    <!-- Pregunta 8: En la noche voy a -->
+    <div class="pregunta">
+      <div class="pictos">
+        <img src="https://static.arasaac.org/pictograms/1209/1209_300.png" alt="Noche">
+        <img src="https://static.arasaac.org/pictograms/3821/3821_300.png" alt="Ir a">
+        <span style="font-size:1.3em;margin-left:12px;">En la noche voy a</span>
+      </div>
+      <label for="noche">Escribir la respuesta</label>
+      <input type="text" id="noche" name="noche" autocomplete="off" />
+    </div>
+
+    <div style="margin-top:32px;">
+      <button type="submit" disabled style="background:#bdbdbd;">(Función de envío próximamente)</button>
+    </div>
+  </form>
+
+  <p style="margin-top: 40px;">
+    <strong>¿Necesitás ayuda para escribir?</strong>  
+    Usá el teclado predictivo de <a href="https://grid.asterics.eu/#grid/grid-data-1753738833446-163" target="_blank">Asterics Grid</a> o tu comunicador favorito.
+  </p>
+</body>
+</html>
